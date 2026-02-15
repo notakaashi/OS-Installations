@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>About Me - OS Installations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>OS Installations</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Installations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="windows-95.html">Windows 95</a></li>
+                            <li><a href="windows-98.html">Windows 98</a></li>
+                            <li><a href="windows-2000.html">Windows 2000</a></li>
+                            <li><a href="windows-me.html">Windows ME</a></li>
+                            <li><a href="windows-xp.html">Windows XP</a></li>
+                            <li><a href="windows-server-2003.html">Windows Server 2003</a></li>
+                            <li><a href="windows-vista.html">Windows Vista</a></li>
+                            <li><a href="windows-server-2008.html">Windows Server 2008</a></li>
+                            <li><a href="windows-7.html">Windows 7</a></li>
+                            <li><a href="windows-8.html">Windows 8</a></li>
+                            <li><a href="windows-server-2012.html">Windows Server 2012</a></li>
+                            <li><a href="windows-10.html">Windows 10</a></li>
+                            <li><a href="windows-11.html">Windows 11</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="about.html" class="active">About Me</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-page">
+        <div class="about-header">
+            <h1>About Me</h1>
+            <p>Learn about the person behind these comprehensive OS installation guides</p>
+        </div>
+
+        <div class="about-content">
+            <p style="text-align: justify;">Hello! I'm Marcus Inigo S. Aristain, a passionate BSIT student from Section S-2A at the Technological University of the Philippines. I created this website as part of my journey to share knowledge about Windows operating systems.</p>
+            
+            <p style="text-align: justify;">As a student of Information Technology, I'm fascinated by how different operating systems work and evolve over time. This website showcases my understanding of Windows OS installations from the early days of Windows 95 to the modern Windows 11.</p>
+            
+            <p style="text-align: justify;">Through this project, I've gained hands-on experience in web development, content creation, and technical documentation. Each installation guide represents my research and understanding of how these systems work.</p>
+            
+            <p style="text-align: justify;">I'm currently studying at the Technological University of the Philippines, where I'm developing my skills in various areas of information technology, including web development, system administration, and technical support.</p>
+            
+            <p style="text-align: justify;">This website serves as both a learning resource for others and a demonstration of my technical abilities. I hope you find these guides helpful for your own OS installation journey.</p>
+            
+            <p style="text-align: justify;">Thank you for visiting my project. Feel free to explore the different installation guides and learn more about the evolution of Windows operating systems.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 OS Installations. Complete guides for Windows OS installations.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="activities.html">Activities</a>
+                <a href="about.html">About Me</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Dropdown menu
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.matches('.dropdown-toggle')) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

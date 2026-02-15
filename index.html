@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>OS Installations - Complete Windows OS Installation Guides</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>OS Installations</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Installations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="windows-95.html">Windows 95</a></li>
+                            <li><a href="windows-98.html">Windows 98</a></li>
+                            <li><a href="windows-2000.html">Windows 2000</a></li>
+                            <li><a href="windows-me.html">Windows ME</a></li>
+                            <li><a href="windows-xp.html">Windows XP</a></li>
+                            <li><a href="windows-server-2003.html">Windows Server 2003</a></li>
+                            <li><a href="windows-vista.html">Windows Vista</a></li>
+                            <li><a href="windows-server-2008.html">Windows Server 2008</a></li>
+                            <li><a href="windows-7.html">Windows 7</a></li>
+                            <li><a href="windows-8.html">Windows 8</a></li>
+                            <li><a href="windows-server-2012.html">Windows Server 2012</a></li>
+                            <li><a href="windows-10.html">Windows 10</a></li>
+                            <li><a href="windows-11.html">Windows 11</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Complete Windows OS Installation Guides</h1>
+                <p>Step-by-step tutorials for installing every Windows operating system from Windows 95 to Windows 11. Learn OS installations with clear instructions and video guides.</p>
+                <a href="#installations" class="cta-button">Browse Installations</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 OS Installations. Complete guides for Windows OS installations.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="activities.html">Activities</a>
+                <a href="about.html">About Me</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Dropdown menu
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.matches('.dropdown-toggle')) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

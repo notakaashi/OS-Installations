@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>Windows 95 Installation Guide - Complete OS Installations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>OS Installations</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Installations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="windows-95.html" class="active">Windows 95</a></li>
+                            <li><a href="windows-98.html">Windows 98</a></li>
+                            <li><a href="windows-2000.html">Windows 2000</a></li>
+                            <li><a href="windows-me.html">Windows ME</a></li>
+                            <li><a href="windows-xp.html">Windows XP</a></li>
+                            <li><a href="windows-server-2003.html">Windows Server 2003</a></li>
+                            <li><a href="windows-vista.html">Windows Vista</a></li>
+                            <li><a href="windows-server-2008.html">Windows Server 2008</a></li>
+                            <li><a href="windows-7.html">Windows 7</a></li>
+                            <li><a href="windows-8.html">Windows 8</a></li>
+                            <li><a href="windows-server-2012.html">Windows Server 2012</a></li>
+                            <li><a href="windows-10.html">Windows 10</a></li>
+                            <li><a href="windows-11.html">Windows 11</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="os-page">
+        <div class="os-header">
+            <h1>Windows 95 Installation Guide</h1>
+        </div>
+
+        <div class="video-container">
+            <h2>Watch the Installation Process</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube-nocookie.com/embed/-0plyw1rJR4?wmode=opaque&rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+        </div>
+
+        <div class="installation-steps">
+            <h2>Installation Steps</h2>
+            <ol>
+                <li>Start your computer and boot from the Windows 95 installation disk</li>
+                <li>Press F8 when you see "Starting Windows 95" to access the startup menu</li>
+                <li>Select "Command Prompt Only" from the menu</li>
+                <li>Navigate to your CD-ROM drive using the appropriate drive letter</li>
+                <li>Run SETUP.EXE to begin the installation process</li>
+                <li>Follow the on-screen instructions to accept the license agreement</li>
+                <li>Choose the installation directory (default is C:\WINDOWS)</li>
+                <li>Select your installation type: Typical, Portable, Compact, or Custom</li>
+                <li>Enter your user information and product key when prompted</li>
+                <li>Wait for files to copy to your hard drive</li>
+                <li>Configure your hardware settings when the system restarts</li>
+                <li>Complete the final setup steps including date/time and printer setup</li>
+                <li>Your Windows 95 installation is now complete</li>
+            </ol>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 OS Installations. Complete guides for Windows OS installations.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="activities.html">Activities</a>
+                <a href="about.html">About Me</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Dropdown menu
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.matches('.dropdown-toggle')) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
