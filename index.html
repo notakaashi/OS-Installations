@@ -12,7 +12,7 @@
         <nav>
             <div class="nav-container">
                 <div class="logo">
-                    <h1>OS Installations</h1>
+                    <h1>ARISTAIN - OS</h1>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="active">Home</a></li>
@@ -51,7 +51,7 @@
             <div class="hero-content">
                 <h1>Complete Windows OS Installation Guides</h1>
                 <p>Step-by-step tutorials for installing every Windows operating system from Windows 95 to Windows 11. Learn OS installations with clear instructions and video guides.</p>
-                <a href="#installations" class="cta-button">Browse Installations</a>
+                <a href="#installations" class="cta-button" onclick="scrollToInstallations(event)">Browse Installations</a>
             </div>
         </section>
     </main>
@@ -92,6 +92,19 @@
                 dropdownMenu.classList.remove('show');
             }
         });
+
+        // Scroll to installations section
+        function scrollToInstallations(event) {
+            event.preventDefault();
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            
+            // Show the dropdown menu
+            dropdownMenu.classList.add('show');
+            
+            // Scroll to the dropdown
+            dropdown.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
     </script>
 </body>
 </html>
