@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>Windows 98 Installation Guide - Complete OS Installations</title>
+    <title>DHCP Role and Domain - OS Installations</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
                         <a href="#" class="dropdown-toggle">Installations</a>
                         <ul class="dropdown-menu">
                             <li><a href="windows-95.html">Windows 95</a></li>
-                            <li><a href="windows-98.html" class="active">Windows 98</a></li>
+                            <li><a href="windows-98.html">Windows 98</a></li>
                             <li><a href="windows-2000.html">Windows 2000</a></li>
                             <li><a href="windows-me.html">Windows ME</a></li>
                             <li><a href="windows-xp.html">Windows XP</a></li>
@@ -38,7 +38,7 @@
                         <a href="#" class="dropdown-toggle">Activities</a>
                         <ul class="dropdown-menu">
                             <li><a href="adding-users.html">Adding Users</a></li>
-                            <li><a href="dhcp-role-domain.html">DHCP Role and Domain</a></li>
+                            <li><a href="dhcp-role-domain.html" class="active">DHCP Role and Domain</a></li>
                             <li><a href="raid-installations.html">RAID Installations</a></li>
                             <li><a href="application-web-server.html">Application and Web Server</a></li>
                             <li><a href="file-server.html">File Server</a></li>
@@ -55,39 +55,74 @@
         </nav>
     </header>
 
-    <main class="os-page">
-        <div class="os-header">
-            <h1>Windows 98 Installation Guide</h1>
+    <main class="activity-detail">
+        <div class="activity-header">
+            <h1>DHCP Role and Domain</h1>
+            <p>Master DHCP role setup and domain configuration in your OS installations. This guide helps you build network services and manage domain environments.</p>
         </div>
 
-        <div class="video-container">
-            <h2>Watch the Installation Process</h2>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube-nocookie.com/embed/sDnoMb_XW3Y?wmode=opaque&rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+        <div class="activity-content">
+            <div class="video-section">
+                <h2>Video Tutorial</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/M1XfhJMTokE?wmode=opaque&rel=0&showinfo=0" 
+                            frameborder="0" 
+                            allowfullscreen=""
+                            referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+                <p>Follow along with this detailed guide to set up DHCP roles and domain controllers in your OS installations.</p>
+            </div>
+
+            <div class="instructions">
+                <h2>Setting Up DHCP Role</h2>
+                <p>DHCP makes network management easier by assigning IP addresses automatically. It's a key part of OS installations for servers.</p>
+                
+                <h3>DHCP Installation Steps:</h3>
+                <ol>
+                    <li>Open Server Manager on your Windows Server</li>
+                    <li>Click "Add Roles and Features"</li>
+                    <li>Select "Role-based or feature-based installation"</li>
+                    <li>Choose your server from the pool</li>
+                    <li>Select "DHCP Server" from the list</li>
+                    <li>Click "Add Features" when prompted</li>
+                    <li>Complete the installation wizard</li>
+                    <li>Configure DHCP scope and options</li>
+                </ol>
+
+                <h3>Domain Controller Setup:</h3>
+                <ol>
+                    <li>Install Active Directory Domain Services role</li>
+                    <li>Promote the server to a domain controller</li>
+                    <li>Create a new forest or join existing domain</li>
+                    <li>Set domain name and functional level</li>
+                    <li>Configure DNS services</li>
+                    <li>Create domain administrator account</li>
+                    <li>Set up group policies</li>
+                    <li>Test domain connectivity</li>
+                </ol>
+
+                <h3>DHCP Scope Configuration:</h3>
+                <ul>
+                    <li>Define IP address range for your network</li>
+                    <li>Set subnet mask and default gateway</li>
+                    <li>Configure DNS server addresses</li>
+                    <li>Set lease duration for IP assignments</li>
+                    <li>Create reservations for specific devices</li>
+                    <li>Set up exclusion ranges if needed</li>
+                </ul>
+
+                <h3>Domain Management Tasks:</h3>
+                <ul>
+                    <li>Create user and computer accounts</li>
+                    <li>Set up organizational units (OUs)</li>
+                    <li>Configure group policy objects</li>
+                    <li>Manage domain trusts and relationships</li>
+                    <li>Monitor replication between domain controllers</li>
+                    <li>Set up domain security policies</li>
+                </ul>
             </div>
         </div>
-
-        <div class="installation-steps">
-            <h2>Installation Steps</h2>
-            <ol>
-                <li>Boot your computer from the Windows 98 startup disk</li>
-                <li>Enable CD-ROM support from the startup menu</li>
-                <li>Navigate to your CD-ROM drive (usually D: or E:)</li>
-                <li>Type SETUP and press Enter to start installation</li>
-                <li>Run the system scan to check for problems</li>
-                <li>Accept the license agreement to continue</li>
-                <li>Enter your product key when prompted</li>
-                <li>Select the installation directory (default is C:\WINDOWS)</li>
-                <li>Choose your setup type: Typical, Custom, or Compact</li>
-                <li>Select the components you want to install</li>
-                <li>Configure your computer identity and workgroup</li>
-                <li>Wait for files to copy and system to restart</li>
-                <li>Complete the hardware detection process</li>
-                <li>Set your time zone and date/time settings</li>
-                <li>Your Windows 98 installation is now ready to use</li>
-            </ol>
-        </div>
-
     </main>
 
     <footer>

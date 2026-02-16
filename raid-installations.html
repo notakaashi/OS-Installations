@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>Windows 98 Installation Guide - Complete OS Installations</title>
+    <title>RAID Installations - OS Installations</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
                         <a href="#" class="dropdown-toggle">Installations</a>
                         <ul class="dropdown-menu">
                             <li><a href="windows-95.html">Windows 95</a></li>
-                            <li><a href="windows-98.html" class="active">Windows 98</a></li>
+                            <li><a href="windows-98.html">Windows 98</a></li>
                             <li><a href="windows-2000.html">Windows 2000</a></li>
                             <li><a href="windows-me.html">Windows ME</a></li>
                             <li><a href="windows-xp.html">Windows XP</a></li>
@@ -39,7 +39,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="adding-users.html">Adding Users</a></li>
                             <li><a href="dhcp-role-domain.html">DHCP Role and Domain</a></li>
-                            <li><a href="raid-installations.html">RAID Installations</a></li>
+                            <li><a href="raid-installations.html" class="active">RAID Installations</a></li>
                             <li><a href="application-web-server.html">Application and Web Server</a></li>
                             <li><a href="file-server.html">File Server</a></li>
                         </ul>
@@ -55,39 +55,82 @@
         </nav>
     </header>
 
-    <main class="os-page">
-        <div class="os-header">
-            <h1>Windows 98 Installation Guide</h1>
+    <main class="activity-detail">
+        <div class="activity-header">
+            <h1>RAID Installations</h1>
+            <p>Learn how to set up RAID arrays in your OS installations. This guide shows you how to create redundant storage systems for better data protection.</p>
         </div>
 
-        <div class="video-container">
-            <h2>Watch the Installation Process</h2>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube-nocookie.com/embed/sDnoMb_XW3Y?wmode=opaque&rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+        <div class="activity-content">
+            <div class="video-section">
+                <h2>Video Tutorial</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/fk1h2_FmWpg?wmode=opaque&rel=0&showinfo=0" 
+                            frameborder="0" 
+                            allowfullscreen=""
+                            referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+                <p>Watch this step-by-step guide to learn RAID setup techniques for your OS installations.</p>
+            </div>
+
+            <div class="instructions">
+                <h2>Understanding RAID</h2>
+                <p>RAID protects your data by spreading it across multiple drives. It's an important skill for server OS installations.</p>
+                
+                <h3>RAID Types:</h3>
+                <ul>
+                    <li><strong>RAID 0 (Striping):</strong> Fast performance, no redundancy</li>
+                    <li><strong>RAID 1 (Mirroring):</strong> Exact copy on two drives</li>
+                    <li><strong>RAID 5 (Striping with Parity):</strong> Good balance of speed and safety</li>
+                    <li><strong>RAID 6 (Striping with Dual Parity):</strong> Can survive two drive failures</li>
+                    <li><strong>RAID 10 (Mirrored Striping):</strong> Fast and redundant</li>
+                </ul>
+
+                <h3>Hardware RAID Setup:</h3>
+                <ol>
+                    <li>Install RAID controller in server</li>
+                    <li>Connect hard drives to controller</li>
+                    <li>Enter RAID BIOS during boot</li>
+                    <li>Create RAID array with desired level</li>
+                    <li>Configure stripe size and cache settings</li>
+                    <li>Initialize the array</li>
+                    <li>Install OS with RAID drivers</li>
+                    <li>Verify array status in OS</li>
+                </ol>
+
+                <h3>Software RAID in Windows:</h3>
+                <ol>
+                    <li>Open Disk Management</li>
+                    <li>Convert disks to dynamic</li>
+                    <li>Right-click and select "New RAID-5 Volume"</li>
+                    <li>Add disks to the array</li>
+                    <li>Assign drive letter and format</li>
+                    <li>Wait for resynchronization to complete</li>
+                    <li>Test the array performance</li>
+                </ol>
+
+                <h3>RAID Maintenance:</h3>
+                <ul>
+                    <li>Monitor array health regularly</li>
+                    <li>Replace failed drives promptly</li>
+                    <li>Keep spare drives on hand</li>
+                    <li>Test backup procedures</li>
+                    <li>Update RAID controller firmware</li>
+                    <li>Document array configuration</li>
+                    <li>Plan for capacity expansion</li>
+                </ul>
+
+                <h3>Common RAID Issues:</h3>
+                <ul>
+                    <li>Drive failures and rebuild times</li>
+                    <li>Performance degradation during rebuild</li>
+                    <li>Controller compatibility problems</li>
+                    <li>Boot issues with system drives</li>
+                    <li>Array degradation warnings</li>
+                </ul>
             </div>
         </div>
-
-        <div class="installation-steps">
-            <h2>Installation Steps</h2>
-            <ol>
-                <li>Boot your computer from the Windows 98 startup disk</li>
-                <li>Enable CD-ROM support from the startup menu</li>
-                <li>Navigate to your CD-ROM drive (usually D: or E:)</li>
-                <li>Type SETUP and press Enter to start installation</li>
-                <li>Run the system scan to check for problems</li>
-                <li>Accept the license agreement to continue</li>
-                <li>Enter your product key when prompted</li>
-                <li>Select the installation directory (default is C:\WINDOWS)</li>
-                <li>Choose your setup type: Typical, Custom, or Compact</li>
-                <li>Select the components you want to install</li>
-                <li>Configure your computer identity and workgroup</li>
-                <li>Wait for files to copy and system to restart</li>
-                <li>Complete the hardware detection process</li>
-                <li>Set your time zone and date/time settings</li>
-                <li>Your Windows 98 installation is now ready to use</li>
-            </ol>
-        </div>
-
     </main>
 
     <footer>

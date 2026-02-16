@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>Windows 98 Installation Guide - Complete OS Installations</title>
+    <title>File Server - OS Installations</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
                         <a href="#" class="dropdown-toggle">Installations</a>
                         <ul class="dropdown-menu">
                             <li><a href="windows-95.html">Windows 95</a></li>
-                            <li><a href="windows-98.html" class="active">Windows 98</a></li>
+                            <li><a href="windows-98.html">Windows 98</a></li>
                             <li><a href="windows-2000.html">Windows 2000</a></li>
                             <li><a href="windows-me.html">Windows ME</a></li>
                             <li><a href="windows-xp.html">Windows XP</a></li>
@@ -41,7 +41,7 @@
                             <li><a href="dhcp-role-domain.html">DHCP Role and Domain</a></li>
                             <li><a href="raid-installations.html">RAID Installations</a></li>
                             <li><a href="application-web-server.html">Application and Web Server</a></li>
-                            <li><a href="file-server.html">File Server</a></li>
+                            <li><a href="file-server.html" class="active">File Server</a></li>
                         </ul>
                     </li>
                     <li><a href="about.html">About Me</a></li>
@@ -55,39 +55,95 @@
         </nav>
     </header>
 
-    <main class="os-page">
-        <div class="os-header">
-            <h1>Windows 98 Installation Guide</h1>
+    <main class="activity-detail">
+        <div class="activity-header">
+            <h1>File Server</h1>
+            <p>Set up file servers in your OS installations to centralize data storage and sharing. This guide shows you how to create efficient file management systems.</p>
         </div>
 
-        <div class="video-container">
-            <h2>Watch the Installation Process</h2>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube-nocookie.com/embed/sDnoMb_XW3Y?wmode=opaque&rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+        <div class="activity-content">
+            <div class="video-section">
+                <h2>Video Tutorial</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/sgc2EBTUd7A?wmode=opaque&rel=0&showinfo=0" 
+                            frameborder="0" 
+                            allowfullscreen=""
+                            referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+                <p>Watch this detailed guide to learn file server setup and management for your OS installations.</p>
+            </div>
+
+            <div class="instructions">
+                <h2>File Server Setup</h2>
+                <p>File servers let you store and share files across your network. They're essential for business OS installations.</p>
+                
+                <h3>File Server Installation:</h3>
+                <ol>
+                    <li>Install Windows Server OS</li>
+                    <li>Join server to domain if needed</li>
+                    <li>Add File and Storage Services role</li>
+                    <li>Configure disk partitions</li>
+                    <li>Format drives with NTFS</li>
+                    <li>Set up shared folders</li>
+                    <li>Configure user permissions</li>
+                    <li>Test file access</li>
+                </ol>
+
+                <h3>Share Configuration:</h3>
+                <ol>
+                    <li>Create folders for different departments</li>
+                    <li>Right-click folder and select "Properties"</li>
+                    <li>Go to "Sharing" tab</li>
+                    <li>Click "Advanced Sharing"</li>
+                    <li>Check "Share this folder"</li>
+                    <li>Set share name and permissions</li>
+                    <li>Configure NTFS permissions</li>
+                    <li>Test access from client machines</li>
+                </ol>
+
+                <h3>Permission Management:</h3>
+                <ul>
+                    <li><strong>Read:</strong> View files and folders</li>
+                    <li><strong>Write:</strong> Create and modify files</li>
+                    <li><strong>Modify:</strong> Change and delete files</li>
+                    <li><strong>Full Control:</strong> Complete access including permissions</li>
+                    <li><strong>Special Permissions:</strong> Custom access rules</li>
+                </ul>
+
+                <h3>File Server Features:</h3>
+                <ul>
+                    <li>Folder redirection for user profiles</li>
+                    <li>Distributed File System (DFS)</li>
+                    <li>File screening and quotas</li>
+                    <li>Shadow copies for recovery</li>
+                    <li>File replication services</li>
+                    <li>Access-based enumeration</li>
+                </ul>
+
+                <h3>Storage Management:</h3>
+                <ul>
+                    <li>Monitor disk space usage</li>
+                    <li>Set up storage quotas</li>
+                    <li>Implement backup strategies</li>
+                    <li>Plan for capacity growth</li>
+                    <li>Use disk cleanup tools</li>
+                    <li>Archive old files</li>
+                    <li>Monitor file server performance</li>
+                </ul>
+
+                <h3>Security Considerations:</h3>
+                <ul>
+                    <li>Regular security updates</li>
+                    <li>Antivirus protection</li>
+                    <li>Audit file access logs</li>
+                    <li>Encrypt sensitive data</li>
+                    <li>Network segmentation</li>
+                    <li>Firewall configuration</li>
+                    <li>User access reviews</li>
+                </ul>
             </div>
         </div>
-
-        <div class="installation-steps">
-            <h2>Installation Steps</h2>
-            <ol>
-                <li>Boot your computer from the Windows 98 startup disk</li>
-                <li>Enable CD-ROM support from the startup menu</li>
-                <li>Navigate to your CD-ROM drive (usually D: or E:)</li>
-                <li>Type SETUP and press Enter to start installation</li>
-                <li>Run the system scan to check for problems</li>
-                <li>Accept the license agreement to continue</li>
-                <li>Enter your product key when prompted</li>
-                <li>Select the installation directory (default is C:\WINDOWS)</li>
-                <li>Choose your setup type: Typical, Custom, or Compact</li>
-                <li>Select the components you want to install</li>
-                <li>Configure your computer identity and workgroup</li>
-                <li>Wait for files to copy and system to restart</li>
-                <li>Complete the hardware detection process</li>
-                <li>Set your time zone and date/time settings</li>
-                <li>Your Windows 98 installation is now ready to use</li>
-            </ol>
-        </div>
-
     </main>
 
     <footer>

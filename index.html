@@ -34,7 +34,16 @@
                             <li><a href="windows-11.html">Windows 11</a></li>
                         </ul>
                     </li>
-                    <li><a href="activities.html">Activities</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Activities</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="adding-users.html">Adding Users</a></li>
+                            <li><a href="dhcp-role-domain.html">DHCP Role and Domain</a></li>
+                            <li><a href="raid-installations.html">RAID Installations</a></li>
+                            <li><a href="application-web-server.html">Application and Web Server</a></li>
+                            <li><a href="file-server.html">File Server</a></li>
+                        </ul>
+                    </li>
                     <li><a href="about.html">About Me</a></li>
                 </ul>
                 <div class="hamburger">
@@ -61,7 +70,6 @@
             <p>&copy; 2026 OS Installations. Complete guides for Windows OS installations.</p>
             <div class="footer-links">
                 <a href="index.html">Home</a>
-                <a href="activities.html">Activities</a>
                 <a href="about.html">About Me</a>
             </div>
         </div>
@@ -77,19 +85,32 @@
             navMenu.classList.toggle('active');
         });
 
-        // Dropdown menu
-        const dropdownToggle = document.querySelector('.dropdown-toggle');
-        const dropdownMenu = document.querySelector('.dropdown-menu');
+        // Dropdown menus
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
         
-        dropdownToggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            dropdownMenu.classList.toggle('show');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Close all other dropdowns
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    if (menu !== toggle.nextElementSibling) {
+                        menu.classList.remove('show');
+                    }
+                });
+                
+                // Toggle current dropdown
+                const dropdownMenu = toggle.nextElementSibling;
+                dropdownMenu.classList.toggle('show');
+            });
         });
 
-        // Close dropdown when clicking outside
+        // Close dropdowns when clicking outside
         document.addEventListener('click', (e) => {
             if (!e.target.matches('.dropdown-toggle')) {
-                dropdownMenu.classList.remove('show');
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    menu.classList.remove('show');
+                });
             }
         });
 
