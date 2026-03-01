@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>File Server - OS Installations</title>
+    <title>Group Policy - OS Installations</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    <h1>ARISTAIN - OS</h1>
-                </div>
+        <div class="container">
+            <div class="logo">
+                <h1>OS Installations</h1>
+                <p>Complete guides for Windows OS installations</p>
+            </div>
+            <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
@@ -41,8 +44,8 @@
                             <li><a href="dhcp-role-domain.html">DHCP Role and Domain</a></li>
                             <li><a href="raid-installations.html">RAID Installations</a></li>
                             <li><a href="application-web-server.html">Application and Web Server</a></li>
-                            <li><a href="file-server.html" class="active">File Server</a></li>
-                            <li><a href="group-policy.html">Group Policy</a></li>
+                            <li><a href="file-server.html">File Server</a></li>
+                            <li><a href="group-policy.html" class="active">Group Policy</a></li>
                         </ul>
                     </li>
                     <li><a href="about.html">About Me</a></li>
@@ -52,96 +55,96 @@
                     <span></span>
                     <span></span>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main class="activity-detail">
         <div class="activity-header">
-            <h1>File Server</h1>
-            <p>Set up file servers in your OS installations to centralize data storage and sharing. This guide shows you how to create efficient file management systems.</p>
+            <h1>Group Policy</h1>
+            <p>Master Group Policy management in your OS installations. This guide shows you how to control and manage user and computer settings across your network.</p>
         </div>
 
         <div class="activity-content">
             <div class="video-section">
                 <h2>Video Tutorial</h2>
                 <div class="video-container">
-                    <iframe src="https://www.youtube-nocookie.com/embed/sgc2EBTUd7A?wmode=opaque&rel=0&showinfo=0" 
+                    <iframe src="https://www.youtube-nocookie.com/embed/9OIF_eOPY6Y?wmode=opaque&rel=0&showinfo=0" 
                             frameborder="0" 
                             allowfullscreen=""
                             referrerpolicy="strict-origin-when-cross-origin">
                     </iframe>
                 </div>
-                <p>Watch this detailed guide to learn file server setup and management for your OS installations.</p>
+                <p>Follow this comprehensive guide to learn Group Policy setup and management for your OS installations.</p>
             </div>
 
             <div class="instructions">
-                <h2>File Server Setup</h2>
-                <p>File servers let you store and share files across your network. They're essential for business OS installations.</p>
+                <h2>Understanding Group Policy</h2>
+                <p>Group Policy lets you manage user and computer settings across your network. It's a powerful tool for Windows OS installations in enterprise environments.</p>
                 
-                <h3>File Server Installation:</h3>
+                <h3>Group Policy Components:</h3>
+                <ul>
+                    <li><strong>Group Policy Objects (GPOs):</strong> Collections of policy settings</li>
+                    <li><strong>Group Policy Management Console (GPMC):</strong> Main administration tool</li>
+                    <li><strong>Active Directory:</strong> Stores and applies GPOs</li>
+                    <li><strong>Client Side Extensions:</strong> Apply policies on client machines</li>
+                    <li><strong>Group Policy Templates:</strong> Define policy settings</li>
+                </ul>
+
+                <h3>Creating a Group Policy Object:</h3>
                 <ol>
-                    <li>Install Windows Server OS</li>
-                    <li>Join server to domain if needed</li>
-                    <li>Add File and Storage Services role</li>
-                    <li>Configure disk partitions</li>
-                    <li>Format drives with NTFS</li>
-                    <li>Set up shared folders</li>
-                    <li>Configure user permissions</li>
-                    <li>Test file access</li>
+                    <li>Open Group Policy Management Console</li>
+                    <li>Right-click on your domain or OU</li>
+                    <li>Select "Create a GPO in this domain, and Link it here"</li>
+                    <li>Enter a descriptive name for the GPO</li>
+                    <li>Click OK to create the GPO</li>
+                    <li>Edit the GPO to configure settings</li>
+                    <li>Link the GPO to the appropriate container</li>
+                    <li>Test policy application on client machines</li>
                 </ol>
 
-                <h3>Share Configuration:</h3>
-                <ol>
-                    <li>Create folders for different departments</li>
-                    <li>Right-click folder and select "Properties"</li>
-                    <li>Go to "Sharing" tab</li>
-                    <li>Click "Advanced Sharing"</li>
-                    <li>Check "Share this folder"</li>
-                    <li>Set share name and permissions</li>
-                    <li>Configure NTFS permissions</li>
-                    <li>Test access from client machines</li>
-                </ol>
-
-                <h3>Permission Management:</h3>
+                <h3>Common Policy Settings:</h3>
                 <ul>
-                    <li><strong>Read:</strong> View files and folders</li>
-                    <li><strong>Write:</strong> Create and modify files</li>
-                    <li><strong>Modify:</strong> Change and delete files</li>
-                    <li><strong>Full Control:</strong> Complete access including permissions</li>
-                    <li><strong>Special Permissions:</strong> Custom access rules</li>
+                    <li><strong>Security Policies:</strong> Password requirements, account lockout</li>
+                    <li><strong>Desktop Settings:</strong> Wallpaper, screen savers, themes</li>
+                    <li><strong>Software Deployment:</strong> Install applications automatically</li>
+                    <li><strong>Folder Redirection:</strong> Move user folders to network shares</li>
+                    <li><strong>Scripts:</strong> Logon/logoff scripts for users</li>
+                    <li><strong>Administrative Templates:</strong> Registry-based settings</li>
+                    <li><strong>Security Settings:</strong> Firewall, user rights, audit policies</li>
                 </ul>
 
-                <h3>File Server Features:</h3>
+                <h3>Group Policy Inheritance:</h3>
                 <ul>
-                    <li>Folder redirection for user profiles</li>
-                    <li>Distributed File System (DFS)</li>
-                    <li>File screening and quotas</li>
-                    <li>Shadow copies for recovery</li>
-                    <li>File replication services</li>
-                    <li>Access-based enumeration</li>
+                    <li>Policies flow from parent to child containers</li>
+                    <li>Local policies have lowest priority</li>
+                    <li>Site policies override local policies</li>
+                    <li>Domain policies override site policies</li>
+                    <li>OU policies override domain policies</li>
+                    <li>Use "Block Inheritance" to stop policy flow</li>
+                    <li>Use "Enforced" to prevent overrides</li>
                 </ul>
 
-                <h3>Storage Management:</h3>
+                <h3>Troubleshooting Group Policy:</h3>
                 <ul>
-                    <li>Monitor disk space usage</li>
-                    <li>Set up storage quotas</li>
-                    <li>Implement backup strategies</li>
-                    <li>Plan for capacity growth</li>
-                    <li>Use disk cleanup tools</li>
-                    <li>Archive old files</li>
-                    <li>Monitor file server performance</li>
+                    <li>Use GPResult to check applied policies</li>
+                    <li>Run gpupdate /force to refresh policies</li>
+                    <li>Check Event Viewer for policy errors</li>
+                    <li>Verify network connectivity to domain controllers</li>
+                    <li>Test with a new user account</li>
+                    <li>Check DNS resolution for domain controllers</li>
+                    <li>Review GPO links and security filtering</li>
                 </ul>
 
-                <h3>Security Considerations:</h3>
+                <h3>Best Practices:</h3>
                 <ul>
-                    <li>Regular security updates</li>
-                    <li>Antivirus protection</li>
-                    <li>Audit file access logs</li>
-                    <li>Encrypt sensitive data</li>
-                    <li>Network segmentation</li>
-                    <li>Firewall configuration</li>
-                    <li>User access reviews</li>
+                    <li>Test policies in a lab environment first</li>
+                    <li>Use descriptive names for GPOs</li>
+                    <li>Document policy configurations</li>
+                    <li>Use WMI filtering for targeted application</li>
+                    <li>Regularly review and clean up unused GPOs</li>
+                    <li>Backup Group Policy configurations</li>
+                    <li>Monitor policy processing performance</li>
                 </ul>
             </div>
         </div>
