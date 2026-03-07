@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>Windows Deployment Services - OS Installations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>ARISTAIN - OS</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Installations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="windows-95.html">Windows 95</a></li>
+                            <li><a href="windows-98.html">Windows 98</a></li>
+                            <li><a href="windows-2000.html">Windows 2000</a></li>
+                            <li><a href="windows-me.html">Windows ME</a></li>
+                            <li><a href="windows-xp.html">Windows XP</a></li>
+                            <li><a href="windows-server-2003.html">Windows Server 2003</a></li>
+                            <li><a href="windows-vista.html">Windows Vista</a></li>
+                            <li><a href="windows-server-2008.html">Windows Server 2008</a></li>
+                            <li><a href="windows-7.html">Windows 7</a></li>
+                            <li><a href="windows-8.html">Windows 8</a></li>
+                            <li><a href="windows-server-2012.html">Windows Server 2012</a></li>
+                            <li><a href="windows-10.html">Windows 10</a></li>
+                            <li><a href="windows-11.html">Windows 11</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Activities</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="adding-users.html">Adding Users</a></li>
+                            <li><a href="dhcp-role-domain.html">DHCP Role and Domain</a></li>
+                            <li><a href="raid-installations.html">RAID Installations</a></li>
+                            <li><a href="application-web-server.html">Application and Web Server</a></li>
+                            <li><a href="file-server.html">File Server</a></li>
+                            <li><a href="group-policy.html">Group Policy</a></li>
+                            <li><a href="windows-deployment-services.html" class="active">Windows Deployment Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Me</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="activity-detail">
+        <div class="activity-header">
+            <h1>Windows Deployment Services</h1>
+            <p>Master Windows Deployment Services for automated OS installations. This guide shows you how to deploy Windows systems efficiently across your network infrastructure.</p>
+        </div>
+
+        <div class="activity-content">
+            <div class="video-section">
+                <h2>Video Tutorial</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/WscNiZ203Hc?wmode=opaque&rel=0&showinfo=0" 
+                            frameborder="0" 
+                            allowfullscreen=""
+                            referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+                <p>Follow this comprehensive guide to set up Windows Deployment Services for automated OS installations in your environment.</p>
+            </div>
+
+            <div class="instructions">
+                <h2>Understanding WDS</h2>
+                <p>Windows Deployment Services lets you deploy Windows operating systems over the network. It's an essential tool for enterprise OS installations and mass deployments.</p>
+                
+                <h3>WDS Components:</h3>
+                <ul>
+                    <li><strong>WDS Server:</strong> Hosts deployment services and boot images</li>
+                    <li><strong>PXE Boot:</strong> Network boot protocol for client computers</li>
+                    <li><strong>Boot Images:</strong> Windows PE environments for deployment</li>
+                    <li><strong>Install Images:</strong> Complete Windows installation images</li>
+                    <li><strong>Discovery Service:</strong> Helps clients locate WDS servers</li>
+                    <li><strong>Multicast Transmission:</strong> Efficient image distribution</li>
+                </ul>
+
+                <h3>Installing WDS Server Role:</h3>
+                <ol>
+                    <li>Open Server Manager on your Windows Server</li>
+                    <li>Click "Add Roles and Features"</li>
+                    <li>Select "Role-based or feature-based installation"</li>
+                    <li>Choose your server from the server pool</li>
+                    <li>Select "Windows Deployment Services" role</li>
+                    <li>Add required features and role services</li>
+                    <li>Complete the installation wizard</li>
+                    <li>Configure WDS after installation</li>
+                </ol>
+
+                <h3>Configuring WDS Server:</h3>
+                <ol>
+                    <li>Open Windows Deployment Services console</li>
+                    <li>Right-click your server and select "Configure Server"</li>
+                    <li>Choose integrated with Active Directory option</li>
+                    <li>Set the remote installation folder path</li>
+                    <li>Configure DHCP server options (60, 66, 67)</li>
+                    <li>Set PXE response settings</li>
+                    <li>Configure client naming policy</li>
+                    <li>Set domain join credentials</li>
+                </ol>
+
+                <h3>Adding Boot Images:</h3>
+                <ol>
+                    <li>Obtain Windows installation media</li>
+                    <li>Extract boot.wim from Sources folder</li>
+                    <li>Right-click "Boot Images" in WDS console</li>
+                    <li>Select "Add Boot Image"</li>
+                    <li>Browse to your boot.wim file</li>
+                    <li>Set image name and description</li>
+                    <li>Configure image architecture settings</li>
+                    <li>Complete the image addition process</li>
+                </ol>
+
+                <h3>Adding Install Images:</h3>
+                <ol>
+                    <li>Create an image group for organization</li>
+                    <li>Right-click "Install Images" and select group</li>
+                    <li>Select "Add Install Image"</li>
+                    <li>Browse to install.wim from Windows media</li>
+                    <li>Choose specific Windows editions to include</li>
+                    <li>Set image names and descriptions</li>
+                    <li>Configure file compression settings</li>
+                    <li>Monitor image import progress</li>
+                </ol>
+
+                <h3>Client Deployment Process:</h3>
+                <ol>
+                    <li>Configure client BIOS for network boot</li>
+                    <li>Set PXE boot as first boot option</li>
+                    <li>Start the client computer</li>
+                    <li>Press F12 for network service boot</li>
+                    <li>Select boot image from WDS menu</li>
+                    <li>Choose Windows edition to install</li>
+                    <li>Configure disk partitioning</li>
+                    <li>Monitor installation progress</li>
+                </ol>
+
+                <h3>Advanced WDS Features:</h3>
+                <ul>
+                    <li><strong>Multicast Deployments:</strong> Deploy to multiple clients simultaneously</li>
+                    <li><strong>Unattended Installations:</strong> Use answer files for automation</li>
+                    <li><strong>Driver Injection:</strong> Add drivers to boot and install images</li>
+                    <li><strong>Image Capture:</strong> Create custom reference images</li>
+                    <li><strong>Database Management:</strong> Track deployments and client information</li>
+                    <li><strong>Prestaged Computers:</strong> Pre-configure client settings</li>
+                    <li><strong>Remote Installation:</strong> Deploy without physical access</li>
+                </ul>
+
+                <h3>Troubleshooting Common Issues:</h3>
+                <ul>
+                    <li>Check network connectivity and DHCP settings</li>
+                    <li>Verify PXE boot configuration on clients</li>
+                    <li>Ensure proper permissions on WDS folders</li>
+                    <li>Validate boot and install image integrity</li>
+                    <li>Check firewall rules for WDS ports</li>
+                    <li>Review WDS server event logs for errors</li>
+                    <li>Test with known working client hardware</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 OS Installations. Complete guides for Windows OS installations.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Dropdown menus
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Close all other dropdowns
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    if (menu !== toggle.nextElementSibling) {
+                        menu.classList.remove('show');
+                    }
+                });
+                
+                // Toggle current dropdown
+                const dropdownMenu = toggle.nextElementSibling;
+                dropdownMenu.classList.toggle('show');
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.matches('.dropdown-toggle')) {
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    menu.classList.remove('show');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
