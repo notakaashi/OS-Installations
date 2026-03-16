@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>OS Installations - Complete Windows OS Installation Guides</title>
+    <title>Case Study 9: Windows Deployment Services - OS Installations</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
                     <h1>ARISTAIN - OS</h1>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Installations</a>
                         <ul class="dropdown-menu">
@@ -57,7 +57,7 @@
                             <li><a href="case-study-remote-desktop.html">6. Remote Desktop Workstations</a></li>
                             <li><a href="case-study-web-server.html">7. Web Server</a></li>
                             <li><a href="case-study-group-policy.html">8. Group Policy</a></li>
-                            <li><a href="case-study-windows-deployment.html">9. Windows Deployment Services</a></li>
+                            <li><a href="case-study-windows-deployment.html" class="active">9. Windows Deployment Services</a></li>
                         </ul>
                     </li>
                     <li><a href="about.html">About Me</a></li>
@@ -71,14 +71,34 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Complete Windows OS Installation Guides</h1>
-                <p>Step-by-step tutorials for installing every Windows operating system from Windows 95 to Windows 11. Learn OS installations with clear instructions and video guides.</p>
-                <a href="#installations" class="cta-button" onclick="scrollToInstallations(event)">Browse Installations</a>
+    <main class="activity-page">
+        <div class="activity-header">
+            <h1>Case Study 9: Windows Deployment Services</h1>
+            <p>Learn how to set up and configure Windows Deployment Services</p>
+        </div>
+
+        <div class="activity-content">
+            <div class="video-section">
+                <h2>Video Tutorial</h2>
+                <div class="video-container">
+                    <p><em>Video coming soon...</em></p>
+                </div>
             </div>
-        </section>
+
+            <div class="description-section">
+                <h2>Overview</h2>
+                <p style="text-align: justify;">This case study covers the complete process of setting up Windows Deployment Services (WDS) for network-based operating system deployment. Learn how to configure PXE boot, create deployment images, and automate Windows installations across your network.</p>
+                
+                <h2>Key Topics Covered</h2>
+                <ul>
+                    <li>Installing Windows Deployment Services role</li>
+                    <li>Configuring PXE boot and DHCP integration</li>
+                    <li>Creating and managing deployment images</li>
+                    <li>Setting up unattended installation files</li>
+                    <li>Managing deployment configurations and settings</li>
+                </ul>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -129,19 +149,6 @@
                 });
             }
         });
-
-        // Scroll to installations section
-        function scrollToInstallations(event) {
-            event.preventDefault();
-            const dropdown = document.querySelector('.dropdown');
-            const dropdownMenu = document.querySelector('.dropdown-menu');
-            
-            // Show the dropdown menu
-            dropdownMenu.classList.add('show');
-            
-            // Scroll to the dropdown
-            dropdown.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
     </script>
 </body>
 </html>

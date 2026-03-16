@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>OS Installations - Complete Windows OS Installation Guides</title>
+    <title>Case Study 2: Domain Users - OS Installations</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
                     <h1>ARISTAIN - OS</h1>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Installations</a>
                         <ul class="dropdown-menu">
@@ -50,7 +50,7 @@
                         <a href="#" class="dropdown-toggle">Case Study</a>
                         <ul class="dropdown-menu">
                             <li><a href="case-study-domain-controller.html">1. Domain Controller</a></li>
-                            <li><a href="case-study-domain-users.html">2. Domain Users</a></li>
+                            <li><a href="case-study-domain-users.html" class="active">2. Domain Users</a></li>
                             <li><a href="case-study-dhcp-server.html">3. DHCP Server</a></li>
                             <li><a href="case-study-file-services.html">4. File Services</a></li>
                             <li><a href="case-study-raid.html">5. RAID</a></li>
@@ -71,14 +71,34 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Complete Windows OS Installation Guides</h1>
-                <p>Step-by-step tutorials for installing every Windows operating system from Windows 95 to Windows 11. Learn OS installations with clear instructions and video guides.</p>
-                <a href="#installations" class="cta-button" onclick="scrollToInstallations(event)">Browse Installations</a>
+    <main class="activity-page">
+        <div class="activity-header">
+            <h1>Case Study 2: Domain Users</h1>
+            <p>Learn how to manage domain users and user accounts</p>
+        </div>
+
+        <div class="activity-content">
+            <div class="video-section">
+                <h2>Video Tutorial</h2>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wxNq0UXNm3Q" title="Domain Users Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
-        </section>
+
+            <div class="description-section">
+                <h2>Overview</h2>
+                <p style="text-align: justify;">This case study covers the complete process of managing domain users in Active Directory environments. Learn how to create, configure, and manage user accounts, set up user profiles, and implement proper security measures.</p>
+                
+                <h2>Key Topics Covered</h2>
+                <ul>
+                    <li>Creating and managing domain user accounts</li>
+                    <li>Configuring user properties and attributes</li>
+                    <li>Setting up user groups and memberships</li>
+                    <li>Managing user profiles and home directories</li>
+                    <li>Implementing user security policies</li>
+                </ul>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -129,19 +149,6 @@
                 });
             }
         });
-
-        // Scroll to installations section
-        function scrollToInstallations(event) {
-            event.preventDefault();
-            const dropdown = document.querySelector('.dropdown');
-            const dropdownMenu = document.querySelector('.dropdown-menu');
-            
-            // Show the dropdown menu
-            dropdownMenu.classList.add('show');
-            
-            // Scroll to the dropdown
-            dropdown.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
     </script>
 </body>
 </html>
