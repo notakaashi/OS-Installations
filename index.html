@@ -75,8 +75,79 @@
         <section class="hero">
             <div class="hero-content">
                 <h1>Complete Windows OS Installation Guides</h1>
-                <p>Step-by-step tutorials for installing every Windows operating system from Windows 95 to Windows 11. Learn OS installations with clear instructions and video guides.</p>
-                <a href="#installations" class="cta-button" onclick="scrollToInstallations(event)">Browse Installations</a>
+                <p>Master every Windows operating system installation from classic Windows 95 to modern Windows 11. Experience comprehensive tutorials with stunning visual guides and expert insights.</p>
+                <a href="#installations" class="cta-button" onclick="scrollToInstallations(event)">Explore Installations</a>
+            </div>
+        </section>
+        
+        <section id="installations" class="installations-grid stagger-fade-in">
+            <h2>Windows Operating Systems</h2>
+            <div class="grid">
+                <div class="os-card" style="--card-index: 0;">
+                    <h3>Windows 95</h3>
+                    <p>The revolutionary operating system that introduced the Start Menu and taskbar to millions of users worldwide.</p>
+                    <a href="windows-95.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 1;">
+                    <h3>Windows 98</h3>
+                    <p>Enhanced stability and improved hardware support made this the go-to choice for home users.</p>
+                    <a href="windows-98.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 2;">
+                    <h3>Windows 2000</h3>
+                    <p>Professional-grade operating system designed for business environments with advanced security features.</p>
+                    <a href="windows-2000.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 3;">
+                    <h3>Windows ME</h3>
+                    <p>The bridge between Windows 98 and XP, featuring enhanced multimedia capabilities and system restore.</p>
+                    <a href="windows-me.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 4;">
+                    <h3>Windows XP</h3>
+                    <p>The legendary operating system that defined an era with its iconic interface and rock-solid stability.</p>
+                    <a href="windows-xp.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 5;">
+                    <h3>Windows Server 2003</h3>
+                    <p>Enterprise-ready server platform with enhanced security and reliability for business infrastructure.</p>
+                    <a href="windows-server-2003.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 6;">
+                    <h3>Windows Vista</h3>
+                    <p>Visually stunning with Aero glass effects, featuring advanced security and user account controls.</p>
+                    <a href="windows-vista.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 7;">
+                    <h3>Windows Server 2008</h3>
+                    <p>Powerful server platform with virtualization capabilities and enhanced management tools.</p>
+                    <a href="windows-server-2008.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 8;">
+                    <h3>Windows 7</h3>
+                    <p>The beloved operating system that combined Vista's beauty with XP's reliability and performance.</p>
+                    <a href="windows-7.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 9;">
+                    <h3>Windows 8</h3>
+                    <p>Revolutionary touch-first interface that bridged the gap between desktop and tablet computing.</p>
+                    <a href="windows-8.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 10;">
+                    <h3>Windows Server 2012</h3>
+                    <p>Cloud-optimized server platform with powerful virtualization and management capabilities.</p>
+                    <a href="windows-server-2012.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 11;">
+                    <h3>Windows 10</h3>
+                    <p>The modern operating system that brought back the Start Menu while introducing universal apps.</p>
+                    <a href="windows-10.html" class="card-link">View Guide</a>
+                </div>
+                <div class="os-card" style="--card-index: 12;">
+                    <h3>Windows 11</h3>
+                    <p>The latest evolution with centered design, enhanced performance, and beautiful rounded corners.</p>
+                    <a href="windows-11.html" class="card-link">View Guide</a>
+                </div>
             </div>
         </section>
     </main>
@@ -92,6 +163,13 @@
     </footer>
 
     <script>
+        // Loading animation
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 500);
+        });
+
         // Mobile menu toggle
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
@@ -133,15 +211,59 @@
         // Scroll to installations section
         function scrollToInstallations(event) {
             event.preventDefault();
-            const dropdown = document.querySelector('.dropdown');
-            const dropdownMenu = document.querySelector('.dropdown-menu');
-            
-            // Show the dropdown menu
-            dropdownMenu.classList.add('show');
-            
-            // Scroll to the dropdown
-            dropdown.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const installations = document.getElementById('installations');
+            installations.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+
+        // Navbar scroll effect
+        const header = document.querySelector('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in, .stagger-fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
